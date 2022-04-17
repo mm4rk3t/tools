@@ -1,9 +1,14 @@
 #!/bin/bash
 
-###########################################################################################
-# Run the following and the instalation will begin					  #
-# sudo sh -c "$(curl https://raw.githubusercontent.com/mm4rk3t/tools/main/postsript.sh)"  #
-###########################################################################################
+#########################################################################################
+# Run this command to get the script					  		#
+# $curl https://raw.githubusercontent.com/mm4rk3t/tools/main/postsript.sh >> ps.sh	#
+#  											#
+# Edit the noroot variable and put YOUR username					#
+# 											#
+# Run the script									#
+# $sudo chmod +x ps.sh && sudo ./ps.sh							#
+#########################################################################################
 
 # TO-DO
 # [ ] Add more programs
@@ -17,6 +22,7 @@ then
 	exit
 fi
 
+# Change this one
 noroot="mm4rk3t"
 
 echo "
