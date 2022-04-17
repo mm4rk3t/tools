@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# sudo sh -c "$(curl https://raw.githubusercontent.com/mm4rk3t/tools/main/postsript.sh)"
+
 # The user is also root if their UID is 0
 if [ "$(whoami)" != root ]
 then
