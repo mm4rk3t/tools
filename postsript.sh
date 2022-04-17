@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# sudo sh -c "$(curl https://raw.githubusercontent.com/mm4rk3t/tools/main/postsript.sh)"
+###########################################################################################
+# Run the following and the instalation will begin					  #
+# sudo sh -c "$(curl https://raw.githubusercontent.com/mm4rk3t/tools/main/postsript.sh)"  #
+###########################################################################################
+
+# TO-DO
+# [ ] Add more programs
+# [ ] Add customization (select different de's)
+# [ ] Configure dotfiles
 
 # The user is also root if their UID is 0
 if [ "$(whoami)" != root ]
@@ -53,6 +61,7 @@ declare -a programs=(
 "alacritty" 
 "discord" 
 "mousepad"
+"code"
 )
 
 for p in ${programs[@]}
