@@ -43,6 +43,9 @@ else
 	(cd /tmp/yay && sudo -u $noroot makepkg -si)
 fi
 
+
+yay -S --needed - < packages.txt
+
 if [ $(ls /usr/bin/gnome*-session | wc -l) -gt 0 ]
 then
 	echo "gnome is already installed"
@@ -51,34 +54,6 @@ else
 	systemctl start gdm.service
 	systemctl enable gdm.service
 fi
-
-if [ $(command -v zsh) ]
-then
-	echo "zsh already installed"
-else
-	yay -S zsh
-	sudo -u $noroot sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
-declare -a programs=(
-"neovim"
-"mpv" 
-"firefox" 
-"alacritty" 
-"discord" 
-"mousepad"
-"code"
-)
-
-for p in ${programs[@]}
-do
-	if [ $(command -v $p) ]
-	then
-        	echo "$p already installed"
-	else
-        	yay -S $p
-	fi
-done
 
 echo "Done!"
 exit
