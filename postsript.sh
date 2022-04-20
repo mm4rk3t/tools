@@ -43,7 +43,7 @@ else
 	(cd /tmp/yay && sudo -u $noroot makepkg -si)
 fi
 
-
+curl https://raw.githubusercontent.com/mm4rk3t/tools/main/packets.txt >> packages.txt
 yay -S --needed - < packages.txt
 
 if [ $(ls /usr/bin/gnome*-session | wc -l) -gt 0 ]
